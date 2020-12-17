@@ -1,1 +1,49 @@
-/*Maak hier jouw CSS!*/
+.container {
+    background-color: darkseagreen;
+    padding: 16px;
+    display: grid;
+    row-gap: 16px;
+    column-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 190px 100px auto 50px;
+    grid-template-areas:
+        "block-a block-c block-c"
+        "block-b block-c block-c"
+        "block-b block-e block-d"
+        "block-b block-e ."
+        "block-f block-f block-f";
+}
+
+.item {
+    background-color: darkslategray;
+    border: 2px solid black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-a {
+    grid-area: block-a;
+}
+
+#item-b {
+    grid-area: block-b;
+    padding: 16px;
+}
+
+#item-c {
+    grid-area: block-c;
+}
+
+#item-d {
+    grid-area: block-d;
+}
+
+#item-e {
+    grid-area: block-e;
+}
+
+#item-f {
+    grid-area: block-f;
+}
